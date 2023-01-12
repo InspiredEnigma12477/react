@@ -1,0 +1,11 @@
+mongoose
+express
+body-parser
+
+app.use json
+
+mongoose.connect 
+put mongosh
+ mongodb: localhost/db_name
+
+ app.listen 3000
