@@ -66,9 +66,10 @@ export default function Signup() {
         console.log(studData);
         axios.post(`http://localhost:6969/api/insert`, studData).then(
             (res) => {
-                alert("data added succesfully")
+                alert("data added succesfully");
             }
         )
+        alert("data added succesfully");
         setBackgroundColor("green");
         if (username === "" || email === "" || password === "")
             setError(true);

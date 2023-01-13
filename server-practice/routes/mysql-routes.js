@@ -21,6 +21,7 @@ app.get('/api/get', (req, res) => {
             console.log(err);
         } else {
             res.send(result);
+            console.log(result)
         }
     })
 })
@@ -33,8 +34,10 @@ app.get("/api/getFromId/:id", (req, res) => {
         (err, result) => {
             if (err) {
                 console.log(err)
+            }else {
+                res.send(result);
+                console.log(result)
             }
-            res.send(result)
         });
 });
 
@@ -42,15 +45,50 @@ app.get("/api/getFromId/:id", (req, res) => {
 app.post('/api/insert', async (req, res) => {
     console.log("POST INSERT request received");
 
-    const username= req.body.username;
+    const username = req.body.username;
     const email = req.body.email;
     const password = req.body.password;
 
     db.query(`INSERT INTO ${table_name} (username, email, password) VALUES (?,?,?)`, [username, email, password], (err, result) => {
         if (err) {
             console.log(err)
+        } else {
+            res.send(result);
+            console.log(result)
         }
-        console.log(result)
+    });
+});
+
+app.patch('/api/update/:updateId',async(req,res)=>{
+    const updateId = req.params.updateId;
+    const username = req.body.username;
+    const email = req.body.email;
+    const password = req.body.password;
+    
+    console.log("UPDATE " + updateId + " request received");
+
+    db.query(`UPDATE ${table_name} SET username=?, email=?, password=? WHERE id=?`, [username, email, password,updateId], (err, result) => {
+        if (err) {
+            console.log(err)
+        }else {
+            res.send(result);
+            console.log(result)
+        }
+    });
+    
+})
+
+app.delete('/api/delete/:deleteId', async (req, res) => {
+    const deleteId = req.params.deleteId;
+    console.log("DELETE " + deleteId + " request received");
+
+    db.query(`DELETE FROM ${table_name} WHERE ID= ?`, deleteId, (err, result) => {
+        if (err) {
+            console.log(err)
+        }else {
+            res.send(result);
+            console.log(result)
+        }
     });
 });
 
