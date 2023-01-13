@@ -7,16 +7,18 @@ import Privacy from './components/Privacy';
 import Home from './components/Home';
 import Signup from './components/Signup';
 import MySQLData from './components/MySQLData';
+import List from './components/List';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
-        <Route path="/mysql" element={<MySQLData />} />
+        <Route path="/list" element={<List />} />
         <Route path="/aboutus" element={<AboutUS />} />
         <Route path="/privacy" element={<Privacy />} />
       </Routes>
@@ -41,7 +43,7 @@ function Navbar() {
               <Link to="/signup">Signup</Link>
             </li>
             <li>
-              <Link to="/mysql">MySQL</Link>
+              <Link to="/list">List</Link>
             </li>
             <li>
               <Link to="/aboutus">About-Us</Link>

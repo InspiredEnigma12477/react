@@ -58,19 +58,20 @@ export default function Signup() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(username, email, password);
-        const studData = {
+        const userData = {
             username: username,
             email: email,
             password: password,
         }
-        console.log(studData);
-        axios.post(`http://localhost:6969/api/insert`, studData).then(
+        console.log(userData);
+        axios.post(`http://localhost:6969/api/insert`, userData).then(
             (res) => {
                 alert("data added succesfully");
             }
         )
-        alert("data added succesfully");
+
         setBackgroundColor("green");
+        
         if (username === "" || email === "" || password === "")
             setError(true);
         else {
