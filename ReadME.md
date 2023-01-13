@@ -9,6 +9,6 @@ npm start
 
 for Server
 ```
-cd server-practice
-npm start
+cd server-practice\routes\
+nodemon mysql-routes.js
 ```
