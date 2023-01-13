@@ -1,0 +1,21 @@
+<html>
+<body>
+    <script>
+        function evenNo(){
+            var num=parseInt(document.getElementById("c").value);
+ //    
+            var i=0;
+            alert(num);
+            while(i<=num){
+                if(i%2==0){
+                    document.write(i+" ");
+                }
+                i++;
+            }
+        }
+    </script>
+    <label>Enter a number: </label>
+    <input type="number" id="c">
+    <button type="button" id="b" onclick="evenNo()">Run</button> 
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h3>Enter Loan Information</h3>
+      <table>
+        <tr>
+          <td>1) Amount of load (any currency);</td>
+          <td><input type="text" name="" id="amount" /></td>
+        </tr>
+
+        <tr>
+          <td>2) Annual percentage rate of interest:</td>
+          <td><input type="text" name="" id="rate" /></td>
+        </tr>
+
+        <tr>
+          <td>3) Repayment period in years:</td>
+          <td><input type="text" name="" id="years" /></td>
+        </tr>
+      </table>
+      <button type="button" onclick="interest()">Compute</button>
+      <h3>Payement Information:</h3>
+      <table>
+        <tr>
+          <td>4) Your monthly payment will be:</td>
+          <td><input type="text" name="" id="monthly" /></td>
+        </tr>
+
+        <tr>
+          <td>5)Your total payment will be:</td>
+          <td><input type="text" name="" id="total" /></td>
+        </tr>
+
+        <tr>
+          <td>6) Your total interest payments will be:</td>
+          <td><input type="text" name="" id="interest" /></td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      interest = () => {
+        principle = parseInt(document.getElementById("amount").value);
+        rate = parseInt(document.getElementById("rate").value);
+        year = parseInt(document.getElementById("years").value);
+
+        interest = (principle * rate * year) / (100 );
+        document.getElementById("interest").value = interest;
+        
+        total = () => {
+          totalAmount = interest + principle;
+          document.getElementById("total").value = totalAmount;
+            
+          months = () => {
+            monthly = totalAmount / (year * 12);
+            document.getElementById("monthly").value = monthly;
+          };months();
+        };total();
+      };
+    </script>
+  </body>
+</html>

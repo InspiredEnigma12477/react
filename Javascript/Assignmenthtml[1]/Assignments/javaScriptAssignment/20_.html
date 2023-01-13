@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // members =[JOHN,STEVE,DAMON,IAN];
+        members = [];
+        show=()=>{
+            document.getElementById("output").classList.remove("hide");
+            document.getElementById("output").classList.add("show");
+        }
+        
+        hide=()=>{
+            document.getElementById("output").classList.remove("show");
+            document.getElementById("output").classList.add("hide");
+        }
+         populate=()=>{
+            members.push(document.getElementById("input").value);
+            document.getElementById("input").value='';
+         }
+         display=()=>{
+            show();
+            var str = members.join(",");
+            str = str.toUpperCase();
+            document.getElementById("output").innerHTML=str;
+         }
+    </script>
+    <style>
+        div{
+            background-color: azure;
+            border: 1px black solid;
+            margin: 10px;
+            width: auto;
+        }
+        .hide{
+            display:none;
+
+        }
+        .show {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="input" id="input" onfocus="hide()" autofocus>
+    <button type="button" onclick="populate()">Add member</button>
+    <button type="button" onclick="display()">Display</button>
+    <div id="output" class="hide"></div>
+    
+</body>
+</html>

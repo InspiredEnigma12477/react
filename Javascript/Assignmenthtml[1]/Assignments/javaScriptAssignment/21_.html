@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        members=[];
+        populate=()=>{
+            members.push(document.getElementById("input").value);
+        }
+        str=''
+        show=()=>{
+            str = ` `;
+                for(ob of members){
+                    str+=`<li>${ob}</li>`;
+                }
+            str+=`</ol>`;
+                document.getElementById("list").innerHTML=str;
+           }
+    </script>
+    <div>
+        <input type="text" name="input" id="input">
+        <button type="button" onclick="populate()">Add Member</button>
+        <button type="button" onclick="show()">Display</button>
+
+    </div>
+    <div id="output">
+       
+    </div>
+    
+    <h3>Members of my group are :</h3>
+    <ol id = "list"type="1">
+
+    </ol>
+</body>
+</html>

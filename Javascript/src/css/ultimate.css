@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #ff5252;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}

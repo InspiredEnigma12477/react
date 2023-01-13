@@ -1,0 +1,18 @@
+npm install caporal
+npm install commander
+npm install express body-parser morgan --save
+npm install serve -g
+npm install open node-fetch yargs --save
+
+npm install create-react-app
+npm install node-sass --save
+
+if want to create a CLI add path in file
+#! /usr/bin/env node
+
+this say to use node
+
+and also add bin path in package.jsom file
+"bin": {
+  "reddit": "./reddit.mjs"
+}

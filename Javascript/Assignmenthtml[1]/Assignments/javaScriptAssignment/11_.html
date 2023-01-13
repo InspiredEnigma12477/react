@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div #output>
+
+   </div>
+   <script>
+        var date = new Date ();
+       
+        getWeekDay=(date)=>{
+            day=date.getDay();
+            if (day == 1) {
+          day1 = "Mon";
+        } else if (day == 2) {
+          day1 = "Tue";
+        } else if (day == 3) {
+          day1 = "Wed";
+        } else if (day == 4) {
+          day1 = "Thu";
+        } else if (day == 5) {
+          day1 = "Fri";
+        } else if (day == 6) {
+          day1 = "Sat";
+        } else if (day == 0) {
+          day1 = "Sun";
+        }
+        return day1;
+        }
+        alert(getWeekDay(date));
+
+
+   </script>
+   
+</body>
+</html>

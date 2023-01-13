@@ -1,0 +1,35 @@
+<!-- Accept an integer value and a message from user and print the message that many number oftimes -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repeat</title>
+</head>
+<body >
+
+    <input type="number" id="fear"><label for="fear">Enter a number</label></input>
+    <br>
+    <input type="text" id="textFear"><label for="textFear">Enter a message</label>
+
+    <button type="button" id="bt" onclick="printAll()">Submit</button>
+    <script>
+        printAll=()=>{
+            var times = document.getElementById("fear").value;
+            var message = document.getElementById("textFear").value;
+            var newM = message +"<br>" ;
+            for(let i=0; i<times-1; i++){
+                newM+=message+"<br>";
+                
+              
+            }
+            document.getElementById("b").innerHTML=newM;
+        }
+        
+    </script>
+    <p id="b"></p>
+
+</body>
+</html>

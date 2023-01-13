@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: burlywood;
+            }
+            table,th,td{
+                border: 1px black dashed ; background-color :green;
+                color:white;
+                border-collapse: collapse;
+            }
+            .inp{
+                background-color: black;
+                color:white;
+            }
+            </style>
+        <script>
+            employee=[];
+            employee=[{empid:1,ename:"Eklavya",esalary:5000},
+            {empid:2,ename:"Akshay",esalary:15000},
+            {empid:3,ename:"Nikhil",esalary:25000},
+            {empid:4,ename:"Abhinav",esalary:35000},
+            {empid:5,ename:"Sourabh",esalary:45000},
+            {empid:6,ename:"Aniket",esalary:65000},
+            ];
+            let sorted;
+            sort=(sorted)=>{
+                sorted = employee.sort(function(a,b){
+                var textA= a.ename.toUpperCase();
+                var textB= b.ename.toUpperCase();
+                return (textA<textB) ? -1 : (textA > textB) ? 1 : 0;
+                    
+            });
+            show(sorted);
+            }
+           
+            add=()=>{
+                id=parseInt(document.getElementById("id").value);
+                name=document.getElementById("name").value;
+                salary=parseInt(document.getElementById("salary").value);
+
+                employee.push({empid:id,ename:name,esalary:salary});
+                document.getElementById("id").value="";
+                document.getElementById("name").value="";
+                document.getElementById("salary").value="";
+
+                
+            }
+            show=(arr)=>{
+                
+                str=`
+                <table> <tr><th>Id</th><th>Name</th><th>Salary</th>`
+
+               
+                for(ob of arr){
+                    str+=`<tr><td>${ob.empid}</td>
+                        <td>${ob.ename}</td>
+                        <td>${ob.esalary}</td>
+                        </tr>`;
+                }
+                str+=`</table>`;
+
+                document.getElementById("output").innerHTML=str;
+            }
+
+        </script>
+    </head>
+    <body >
+        
+        <input type="text" class="inp" id="id" placeholder="Employee Id">
+        <input type="text" class="inp" id="name" placeholder="Employee Name">
+        <input type="text" class="inp" id="salary" placeholder="Employee Salary">
+        <button id="add" type="button" onclick="add()">Add Details</button>
+        <button id="add" type="button" onclick="show(employee)">Show Details</button>
+        <button id="add" type="button" onclick="sort(sorted)">Show sorted Details</button>
+        
+
+        <div id="output"></div>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div>
+        <input type="text" id="input" placeholder="0-1000">
+        <button type="button" onclick="sumOfDigits()">Calculate</button>
+    </div>
+
+    <div id="output"></div>
+        
+    <script>
+        sumOfDigits=()=>{
+            var number = parseInt(document.getElementById("input").value);
+            number = validate(number);
+            if(number!="false"){
+                let sum = 0 ;
+                while(number!=0){
+                    let rem = number%10;
+                    sum+=rem;
+                    number=Math.floor(number/10);
+                }
+                
+                document.getElementById("output").innerHTML =`Sum of digits : ${sum}`;
+
+            }else{
+               document.getElementById("output").innerHTML =` Entered number is out of range`;
+            }
+
+        }
+        validate =(number)=>{
+           
+            if (number>1000 || number <0){
+                return `false`;
+            }else{
+                return number ;
+            }
+
+
+        }
+    </script>
+</body>
+</html>

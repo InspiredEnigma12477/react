@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Question 3</title>
+</head>
+<body>
+    <section>
+        <label for="num">Enter num</label>
+        <input type="number" name="num" id="num">
+        <br>
+        <button type="button" onclick="display()">Submit</button>
+    </section>
+
+    <script>
+        function display(){
+            let num = document.getElementById("num").value;
+            let i = 0;
+            while(i <= num){
+                i += 2;
+                document.getElementById("result"),innerHTML += i + "<br>"  
+            }
+        }
+    </script>
+</body>
+</html>

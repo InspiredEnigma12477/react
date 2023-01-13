@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem-6</title>
+    <link rel="stylesheet" href="../css/problem6.css">
+</head>
+
+<body>
+    <section>
+        <table>
+            <tr>
+                <td colspan="2">
+                    <h1>Internet usagr Survey</h1>
+                    <p>
+                        The survey bemg conducted to help identify the Intemet twage patterns of our customers.
+                        Please take a few moments to complete md submit th1E short form Thank you for your coopaaton.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>What type of Internet connection do you have? (Select One)</p>
+                </td>
+                <td>
+                    <select name="internet-connection" id="" size="5">
+                        <option value="Dial-up">Dial-up</option>
+                        <option value="DSL">DSL</option>
+                        <option value="High-Speed-Cable">High-Speed-Cable</option>
+                        <option value="Satellite">Satellite</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p> What type of computer do you use most at home? </p>
+                </td>
+                <td>
+                    <input type="radio" name="Desktop" id="Desktop">
+                    <label for="Desktop">Desktop</label>
+                    <input type="radio" name="Laptop" id="Laptop">
+                    <label for="Laptop">Laptop</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p> How would you describe your main reason for using the Internet? </p>
+                </td>
+                <td>
+                    <input type="radio" name="option1" id="option1">
+                    <label for="option1">To communicate with friends and family</label>
+                    <br>
+                    <input type="radio" name="option2" id="option2">
+                    <label for="option2">To research and shop for products and services</label>
+                    <br>
+                    <input type="radio" name="option3" id="option3">
+                    <label for="option3">To download music, movies, and games</label>
+                    <br>
+                    <input type="radio" name="option4" id="option4">
+                    <label for="option4">To play games</label>
+                    <br>
+                    <input type="radio" name="option5" id="option5">
+                    <label for="option5">To read news and information</label>
+                    <br>
+                    <input type="radio" name="option6" id="option6">
+                    <label for="option6">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="legend">
+                    <fieldset>
+                        <legend> Types of site visited </legend>
+
+                        <p> What types of sites do you visit most often? Check all that apply. </p>
+
+                        <input type="checkbox" name="option1" id="option1">
+                        <label for="option1">Self improvement</label>
+                        <br>
+                        <input type="checkbox" name="option2" id="option2">
+                        <label for="option2">Entertainment</label>
+                        <br>
+                        <input type="checkbox" name="option3" id="option3">
+                        <label for="option3">News and information</label>
+                        <br>
+                        <input type="checkbox" name="option4" id="option4">
+                        <label for="option4">Shopping</label>
+                        <br>
+                        <input type="checkbox" name="option5" id="option5">
+                        <label for="option5">Social networking</label>
+                        <br>
+                        <input type="checkbox" name="option6" id="option6">
+                        <label for="option6">Other</label>
+                    </fieldset>
+                </td>
+                <td class="legend">
+                    <fieldset>
+                        <legend> Time spent using the Internet </legend>
+                        <p>
+                            During an average week, how much time do you spend using the Internet?
+                        </p>
+                        <input type="radio" name="option1" id="option1">
+                        <label for="option1">Less than 1 hour per day</label>
+                        <br>
+                        <input type="radio" name="option2" id="option2">
+                        <label for="option2">1-3 hours per day</label>
+                        <br>
+                        <input type="radio" name="option3" id="option3">
+                        <label for="option3">3-5 hours per day</label>
+                        <br>
+                        <input type="radio" name="option4" id="option4">
+                        <label for="option4">More than 5 hours per day</label>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Please comment on your opinion concerning about the Internet usage , privacy , security and safety.
+                    <br>
+                    <textarea name="comment" id="" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="firstname">First Name</label>
+                    <input type="text" name="firstname" id="firstname">
+                </td>
+                <td>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname" id="lastname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </td>
+                <td>
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Click to Submit">
+                    <input type="reset" value="Clear Form">
+                </td>
+            </tr>
+
+        </table>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Question 2</title>
+</head>
+
+<body class="newbg2" id="bg">
+
+    <label for="num">Enter the Num </label>
+    <input type="number" id="num">
+    <br>
+
+    <label for="message">Enter the message </label>
+    <input type="text" name="msg" id="msg">
+    <br>
+
+    <button type="button" value="Submit" onclick="display()">
+        Submit
+    </button>
+
+    <div id="result"></div>
+
+    <script>
+        function display() {
+            console.log("hi")
+            var num = document.getElementById("num").value;
+            var msg = document.getElementById("msg").value;
+
+            for (let index = 0; index < num; index++) {
+                document.getElementById("result").innerHTML += msg + "<br>"
+            }
+
+            document.getElementById("bg").classList.add('newbg');
+            document.getElementById("bg").classList.remove('newbg2');
+        }
+    </script>
+</body>
+
+</html>

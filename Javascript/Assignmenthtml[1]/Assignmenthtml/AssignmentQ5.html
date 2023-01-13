@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    table,tr,th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 2px;
+    border-spacing: 2px;
+    }
+
+    th{
+        background-color: rgb(248, 147, 136);
+    }
+
+    td{
+        background-color:rgb(248, 147, 136);
+    }
+
+    textarea{
+        overflow-x: hidden;
+        overflow-y: scroll;
+        resize: none;
+    }
+    input{
+        box-shadow: inset 0 0 1px 1px;
+    }
+
+    #email{
+        color: blue;
+    }
+
+    .container{
+        
+        width: 125px;
+        background-color: white;
+        overflow-y: scroll;
+    }
+    </style>
+    <title>Document</title>
+
+
+
+</head>
+<body>
+    <table>
+        <form>
+        <tr>
+            <td><label for="name">Name</label></td>
+            <td><input type="text" id="name" name="name"></td>
+        </tr>
+        <tr>
+            <td><label for="empcode">Employee Code</label></td>
+            <td><input type="number" name="empcode" id="empcode"></td>
+        </tr>
+        <tr>
+            <td><label for="dept">Department</label></td>
+            <td>
+                <input type="radio" name="dept" id="admin"><label for="adminn">Admin</label><br>
+                <input type="radio" name="dept" id="hr"><label for="hr">HR</label><br>
+                <input type="radio" name="dept" id="technical"><label for="technical">Technical</label><br>
+                <input type="radio" name="dept" id="accounts"><label for="accounts">Accounts</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="doj">Date of joining</label></td>
+            <td><input type="date" id="doj" name="doj"></td>
+        </tr>
+        <tr>
+            <td><label for="addr">Address</label></td>
+            <td><textarea name="addr" id="addr" cols="30" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="trainingprog">Training Programs Attended</label></td>
+            <td>
+                <input type="checkbox" name="trainingprog" id="html/dhtml" value="html/dhtml"><label for="html/dhtml">HTML/DHTML</label><br>
+                <input type="checkbox" name="trainingprog" id="java" value="java"><label for="java">JAVA</label><br>
+                <input type="checkbox" name="trainingprog" id="client/server" value="client/server"><label for="'client/server">Client/server</label><br>
+                <input type="checkbox" name="trainingprog" id=".net" value=".net"><label for=".net">.NET</label>            
+            </td>
+        </tr>
+        <tr>
+            <td><label for="tpna">Training programmers need to attend</label></td>
+            <td>
+                <div class="container">
+                    <div>JAVASCRIPT</div>
+                    <div>JSTRUTS</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="email">Send the Information at</label></td>
+            <td><label for="email" id="email"> <i>empinfo@patni.com</i> </label></td>
+        </tr>
+    </form>
+    </table>
+</body>
+</html>

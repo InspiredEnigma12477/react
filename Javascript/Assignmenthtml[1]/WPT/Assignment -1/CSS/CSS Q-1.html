@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <style>
+            #ch {
+                background-color: black;
+                width: 650px;
+                height: 570px;
+            }
+            legend {
+                background-color: blue;
+                color: white;
+            }
+            fieldset {
+                border-radius: 15px;
+                border-color: blue;
+                border-width: 5px;
+                margin: 5px;
+                width:530px;
+            }
+            #jt{
+                width: 290px;
+                height:150px;
+            }
+            table{
+                width: 530px;
+            }
+            label{
+                float: right;
+            }
+            #w{
+                  width:220px;
+            }
+            #q{
+                width:125px;
+            }
+            td{
+                border-style: solid;
+                border-width: 3px;
+            }
+            input {
+                background-color: black;
+                border-radius: 5px;
+                color:white;
+            }
+            </style>
+    </head>
+<body>
+    <div id="ch">
+        <fieldset>
+            <legend id="i" >Name and address</legend>
+            <table>
+                <tr>
+                    <td id="w"><label for="ss" style="color: white;">SSN: </label></td>
+                    <td><input type="text" name="ss" id="ss"></td>
+                    <td style="width:390px;"><button type="button" style="color: white; background-color:blue; border-radius: 8px;">Fill in the name and address</button></td>
+                </tr>
+                <tr>
+                    <td id="w"><label for="nm" style="color: white;">Full name: </label></td>
+                    <td><input type="text" name="nm" id="nm"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="w"><label for="stn" style="color: white;">Street and number: </label></td>
+                    <td><input type="text" name="stn" id="stn"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="w"><label for="PS" style="color: white;">Postal Code: </label></td>
+                    <td><input type="text" name="PS" id="PS"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="w"><label for="C" style="color: white;">City: </label></td>
+                    <td><input type="text" name="C" id="C"></td>
+                    <td></td>
+                </tr>
+
+            </table>
+
+        </fieldset><br>
+        <fieldset id="jt">
+            <legend id="j" >Username and password</legend>
+            <table>
+                <tr>
+                    <td id="q"><label for="s" style="color: white;">Username: </label></td>
+                    <td><input type="text" name="s" id="s"></td>
+                </tr>
+                <tr>
+                    <td id="q"><label for="n" style="color: white;">Password: </label></td>
+                    <td><input type="password" name="n" id="n"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="color: white; background-color:black; border: none;"><input id="e" type="checkbox" onclick="myfunction()">Show password</td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <button type="submit" style="background-color:blue; color:white; border-radius:5px; margin-left: 100px; ">Register</button>
+
+    </div>
+    <script>
+        function myfunction(){
+            var x=document.getElementById('n')
+            if(x.type=='password'){
+                x.type='text';
+            }
+            else{
+                x.type='password';
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

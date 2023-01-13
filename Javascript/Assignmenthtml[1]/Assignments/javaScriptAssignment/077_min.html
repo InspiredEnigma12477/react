@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            var ak =[];
+            var minimum =8127390478123740128;
+            min=()=>{
+                
+                var newNum = document.getElementById("box").value;
+                if(minimum>newNum){
+                    minimum=newNum;
+                }
+                ak.push(newNum);
+                document.getElementById("output").innerHTML=minimum;
+                document.getElementById("result").innerHTML=ak;
+
+            }
+        </script>
+    </head>
+    <body>
+        <input type="number" name="" id="box" placeholder="12312" autofocus> 
+
+        <button type="button" id="nikky" onclick="min()">add more</button>
+        <div id="result">
+
+        </div>
+        <div id="output">
+
+        </div>
+
+    </body>
+</html>

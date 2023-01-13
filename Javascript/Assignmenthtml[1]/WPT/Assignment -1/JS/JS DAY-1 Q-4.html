@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculate(e){
+            var n1=parseInt(document.getElementById("a").value)
+            var n2=parseInt(document.getElementById("b").value)
+            var rd1=document.getElementById("add")
+            var rd2=document.getElementById("sub")
+            var rd3=document.getElementById("multi")
+            var rd4=document.getElementById("div")
+
+            if(rd1.checked==true){
+                document.getElementById("i").innerHTML=`Addition: ${n1+n2}`
+            }
+            else if(rd2.checked==true){
+                document.getElementById("i").innerHTML=`Subtraction: ${n1-n2}`
+            }
+            else if(rd3.checked==true){
+                document.getElementById("i").innerHTML=`multiplication: ${n1*n2}`
+            }
+            else if(rd4.checked==true){
+                document.getElementById("i").innerHTML=`Division: ${n1/n2}`
+            }
+
+
+        
+    }
+
+    </script>
+    <label>Enter 1st number: </label>
+    <input type="number" id="a"><br>
+    <label>Enter 2nd number: </label>
+    <input type="number" id="b"><br>
+    <input type="radio" name="add" id="add">Addition
+    <input type="radio" name="sub" id="sub">Subtraction
+    <input type="radio" name="multi" id="multi">Multiplication
+    <input type="radio" name="div" id="div">Division
+    <button type="button" id="btn" onclick="calculate(event)" style="background-color: blue; color:aliceblue">Calculate</button><br>
+    <div id="i">
+
+    </div>
+
+</body>
+</html>

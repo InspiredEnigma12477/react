@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+   <div id="myDiv"></div>
+   <script>
+    var employee =[
+        {id:1,name:"Eklavya",salary:1000},
+        {id:2,name:"Akshay ",salary:2000},
+        {id:3,name:"Nikhil",salary:3000},
+        {id:4,name:"Aniket",salary:4000}
+    ];
+    var str = `<style>table,th,td{
+        border : 1px solid black;
+        border-collapse:collapse;
+    }</style><table> <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>salary</th>
+    </tr>`;
+        for (ob of employee){
+            str+= `<tr>
+        <td>${ob.id}</td>
+        <td>${ob.name}</td>
+        <td>${ob.salary}</td>
+        </tr>`;
+        }
+        str+=`</table>`;
+
+        document.getElementById("myDiv").innerHTML=str;
+</script>
+</body>
+</html>

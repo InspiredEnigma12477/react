@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="mydiv"></div>
+    <script>
+        let website=["www.google.com", "www.msn.com","www.amazon.co.in","in.answers.yahoo.com","en.m.wikipedia.com","codehs.gitbooks.io","www.coderanch.com"];
+        let www=[]
+        let count=0;
+        for(ob of website){
+            if(ob.includes("www")){
+                www.push(ob);
+                count++;
+            }
+        }
+        
+        display=(arr)=>{
+            let str =`<table><tr><th>URLs<th></tr>`;
+                for(ob of arr){
+                    str+=`<tr><td>${ob}<td></tr>`;
+                }
+                str+=`</table> <br> Total www websites = count:${count}`;
+                document.getElementById("mydiv").innerHTML=str;
+        }
+        display(www);
+        
+    </script>
+</body>
+</html>

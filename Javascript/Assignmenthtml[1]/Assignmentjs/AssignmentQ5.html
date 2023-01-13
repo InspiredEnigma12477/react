@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+function clr() {
+            document.getElementById("para").innerHTML = "";
+            document.getElementById("num").value = "";
+        }
+
+    function table() {
+        num = parseInt(document.getElementById("num").value);
+        if (!(isNaN(num))) {
+            for (i = 1; i <= 10; i++) {
+                sol = num * i;
+                document.getElementById("para").innerHTML += num + " * " + i + " = " + sol + "<br>";
+            }
+        }
+        else {
+            document.getElementById("para").innerHTML = "Please Enter number";
+            document.getElementById("num").value = "";
+            document.getElementById("num").setAttribute("style", "background-color:yellow"),
+                document.getElementById("num").focus();
+        }
+    }   
+
+    
+</script>
+
+<body>
+    <form>
+        <input type="Number" name="num" id="num" required placeholder="Enter Number"><br>
+        <button type="button" id="btn" onclick="table()"><u>Show table</u></button>
+
+        <input type="button" id="btn1" value="reset" onclick="clr();">
+
+    </form>
+    <div id="para">Table-</div>
+</body>
+
+</html>

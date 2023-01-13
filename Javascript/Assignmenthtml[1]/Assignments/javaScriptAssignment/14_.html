@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <style>
+            div{
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="number" id="length" placeholder="length">
+        <input type="number" id="width" placeholder="width"> 
+        <button type="button" id="rectangle" onclick="populateR()">rectangle</button>
+
+        <br>
+        <input type="number" id="radius" placeholder="radius">
+       
+        <button type="button" id="circle" onclick="populateC()">circle</button>
+<br><br><br>
+        <div id="rectangle"></div>
+        <div id="circle"></div>
+        <script>
+            class rectangle {
+                constructor(length,width){
+                    this.length = length;
+                    this.width = width;
+                }
+                area=()=>{
+                    return this.length * this.width;
+                }
+                perimeter=()=>{
+                //    alert(2*this.length+2*this.width)
+                //    return (2*this.length+2*this.width);
+                   return 2 * (this.length+this.width); 
+                }
+                show=()=>{
+                   let peri=this.perimeter();
+                   let area=this.area();
+                    document.getElementById("rectangle").innerHTML=`<table><tr><th>Length</th><th>Width</th><th>Area</th><th>Perimeter</th> </tr>
+                        <tr><th>${length}</th><th>${width}</th><th>${Math.floor(area)}</th><th>${Math.floor(peri)}</th> <tr>`;
+                }
+
+        }
+            class circle {
+                constructor (radius){
+                    this.radius =radius;
+                }
+                area=()=>{
+                    
+                    return Math.PI*this.radius*this.radius;
+                }
+                circumference=()=>{
+                    
+                    return 2*Math.PI*this.radius;
+                }
+                show=()=>{
+                   let area=this.area();
+                   let peri=this.circumference();
+                    document.getElementById("circle").innerHTML=`<table><tr><th>radius</th><th>Area</th><th>Perimeter</th> </tr>
+                        <tr><th>${radius}</th><th>${Math.floor(area)}</th><th>${Math.floor(peri)}</th> <tr>`;
+                }
+            }
+            populateR=()=>{
+                length=parseInt(document.getElementById("length").value);
+                width=parseInt(document.getElementById("width").value);
+                let r1 = new rectangle(length,width);
+                r1.show();
+            }
+            populateC=()=>{
+                radius=parseINT(document.getElementById("radius").value);
+                let r1 = new circle(radius);
+                r1.show();
+            }
+            
+
+        </script>
+    </body>
+</html>

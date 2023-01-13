@@ -1,0 +1,70 @@
+<html>
+<head>
+    <style>
+     table,th,td {
+        background-color: lightseagreen;
+        border: 2px solid black;
+        border-collapse: collapse;
+     }
+     .CH{
+        background-color: lightseagreen;
+        width: 290px;
+     }
+     input,select{
+        border-style: inset;
+        background-color: grey;
+     }
+    </style>
+</head>
+<body>
+    <form>
+    <table>
+        <tr>
+            <td class="CH">Name</td>
+            <td><input type="text" name=""></td>
+        </tr>
+        <tr>
+            <td class="CH">Employee Code</td>
+            <td><input type="text" name=""></td>
+        </tr>
+        <tr>
+            <td class="CH">Department</td>
+            <td><input type="radio" name="Department">ADMIN<br>
+                <input type="radio" name="Department">HR<br>
+                <input type="radio" name="Department">TECHNICAL<br>
+                <input type="radio" name="Department">ACCOUNTS<br></td>
+        </tr>
+        <tr>
+            <td class="CH">Date of Joining</td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td class="CH">Address</td>
+            <td><textarea name="Address" rows="5" cols="50"></textarea></td>
+        </tr>
+        <tr>
+            <td class="CH">Training programs Attended</td>
+            <td><input type="checkbox">HTML/DHTML<br>
+            <input type="checkbox">JAVA<br>
+            <input type="checkbox">CLIENT SERVER<br>
+            <input type="checkbox">.NET<br></td>
+        </tr>
+        <tr>
+            <td>Training programs needs to be Attended</td>
+            <td><select size="2">
+                <option width="43">javascript</option>
+                <option width="43">jstruts</option>
+                <option width="43">C++</option>
+                </select>
+            </td>
+
+        </tr>
+        <tr>
+            <td class="CH">Send the information at:</td>
+            <td><a href="mailto:empinfo@patni.com">empinfo@patni.com</a></td>
+        </tr>
+    </table><br>
+    <button type="submit" onclick="alert('Details submitted successfully!!')">submit</button>
+    </form>
+</body>
+</html>

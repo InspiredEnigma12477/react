@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compound</title>
+    <script>
+      calculate = () => {
+        var principal = document.getElementById("princi").value;
+        var rate = document.getElementById("rate").value;
+        var year = document.getElementById("year").value;
+
+        let Interest = principal * Math.pow(1 + rate / 100, year) - principal;
+
+        document.getElementById("Interest").value = Math.floor(Interest);
+      };
+    </script>
+    <style>
+      div {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        align-self: center;
+      }
+      #title {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="title">
+      <h1>---------------------------------------------------------------</h1>
+      <h1>***********Compound Interest*************</h1>
+      <h1>---------------------------------------------------------------</h1>
+    </div>
+    <div>
+      <table style="margin: auto">
+        <tr>
+          <th>Principal</th>
+          <th>
+            <input type="text" name="prici" id="princi" placeholder="1000rs" />
+          </th>
+        </tr>
+        <tr>
+          <th>Rate of Interest</th>
+          <th><input type="text" name="rate" id="rate" placeholder="10%" /></th>
+        </tr>
+        <tr>
+          <th>Period</th>
+          <th>
+            <input
+              type="text"
+              name="year"
+              id="year"
+              placeholder="no.of years"
+            />
+          </th>
+        </tr>
+        <tr>
+          <th>Compound Interest</th>
+          <th><input type="text" name="Interest" id="Interest" /></th>
+        </tr>
+      </table>
+      <button type="button" onclick="calculate()">now</button>
+    </div>
+    <div id="output"></div>
+  </body>
+</html>

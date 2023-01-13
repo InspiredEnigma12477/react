@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Enter The Employee Names</h2>
+        <br>
+        <input type="text" name="" id="in1">
+        <input type="text" name="" id="in2">
+        <input type="text" name="" id="in3">
+        <input type="text" name="" id="in4">
+        <input type="text" name="" id="in5">
+        <input type="text" name="" id="in6">
+        <button onclick="Push()">
+            Enter
+        </button>
+        <div id="sorted"></div>
+    </div>
+    <script type="text/javascript">
+        let Emp = [];
+
+        function Push(){
+            var inText1 = document.getElementById("in1").value;
+            var inText2 = document.getElementById("in2").value;
+            var inText3 = document.getElementById("in3").value;
+            var inText4 = document.getElementById("in4").value;
+            var inText5 = document.getElementById("in5").value;
+            var inText6 = document.getElementById("in6").value;
+
+            Emp.push(inText1, inText2, inText3, inText4, inText5, inText6);
+            
+            Emp.sort()
+            document.getElementById("sorted").innerHTML ="The Employee Names are:"+Emp
+
+        }
+    </script>
+</body>
+</html>

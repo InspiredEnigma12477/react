@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 1.5em;
+            font-family: 'Roboto';
+        }
+    </style>
+</head>
+<body>
+    <div id="container" class="container">
+        <p>Enter Radius:</p>
+        <input type="text" id="r" value="0"/>
+        <button type="button" value="calculate" onclick="calculate()">Calculate</button>
+    </div>
+    <div id="area">
+
+    </div>
+    <div id="circ">
+
+    </div>
+    <script type="text/javascript">
+        function calculate() {
+            const r = Number(document.getElementById("r").value);
+            const area = Math.PI*r*r;
+            console.log(area);
+            document.getElementById("area").innerHTML = "area of circle: " + area
+            const circ = Math.PI*2*r;
+            console.log(circ);
+            document.getElementById("circ").innerHTML = "circumference of circle: " + circ
+        }
+    </script>
+</body>
+</html>

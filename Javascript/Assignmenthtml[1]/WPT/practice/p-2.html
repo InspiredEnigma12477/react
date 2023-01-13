@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JQ/jquery.js"></script>
+    <style>
+        .a{
+             background-color: blue;
+             color:white;
+             border-style: dotted;
+             border: 2px solid gold;
+        }
+        .b{
+            background-color: yellow;
+             color:red;
+             border-style: dashed;
+             border: 2px solid green;
+             border-radius: 8px;
+             font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <p class="nm">Hi! I'm Ayush</p><br>
+    <p id="sec">Tell me something about yourself</p>
+    <p id="thr">I'm good</p>
+   <h3 class="a">This is CSS example with JQuery</h3>
+</body>
+<script>
+    $(document).ready(function(){
+        $('.nm').click(function(){
+        console.log("Nice to meeting you!!")
+        $(this).hide();
+    })
+    $('#sec').click(function(){
+        console.log('Not so nice to meet you',this)
+    })
+    $('#thr').click(function(){
+        console.log('Ok goodbye!!')
+    })
+    // $('h3').css({
+    //     "background-color":"blue","color":"white","border":"1px solid black","border-style":"dashed"
+    // })
+    // $('h3').hover(function(){
+    //     $('h3').css({"background-color":"yellow","color":"red","border":"1px solid black","border-style":"dotted","font-size":"50px"})
+    // },function(){
+    //     $('h3').css({"background-color":"blue","color":"white","border":"1px solid black","border-style":"dashed","font-size":"30px"})
+    // })
+    $('h3').hover(function(){
+        $('h3').toggleClass("a")
+        $('h3').toggleClass("b")
+    })
+})
+</script>
+</html>

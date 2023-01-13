@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script>
+            
+            
+            var bunch=[];
+            addNum=()=>{
+                
+                bunch.push(document.getElementById("box").value);
+                show=()=>{
+                document.getElementById("output").innerHTML=bunch;
+                }
+            show();
+            }
+            findmin=()=>{
+                document.getElementById("box").value="";
+                var min=bunch[0];
+               /* for(var i=0;i<bunch.length;i++){
+                   
+                    if(bunch[i]<=min)
+                    {
+
+                        min=bunch[i];
+                    }
+                    
+                }*/
+                for(var i=0;i<bunch.length;i++)
+                {
+                    if(bunch[i]<=min)
+                    {
+                        min=bunch[i];
+                    }
+                }
+                document.getElementById("min1").innerHTML="minimum number :"+min;
+            }
+           // findmin();
+            
+            
+            
+        </script>
+    </head>
+    <body>
+        
+        <input type="number" id="box" placeholder="Enter a number" autofocus    >
+        <br> 
+        <button type="button" onclick="addNum()" >Add more</button>
+        <button type="button" onclick="findmin()" >find minimum</button>
+        <div id="output"></div>
+        <div id="min1"></div>
+
+
+    </body>
+</html>
+

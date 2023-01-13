@@ -1,0 +1,30 @@
+<!-- Write a program to print the multiplication table of a given number up to 10 multiples -->
+<html>
+    
+    <head>
+        <title>tables</title>    
+
+        
+    </head>
+    <body>
+        <script>
+            printTable=()=>{
+                
+                var num = document.getElementById("num").value;
+                var output1 = "<table style='border:solid black 1px' border-collapase:collapse padding:10px margin:10px>"
+                for(let i = 1 ; i<11 ;i++){
+                    let result = i*num;
+                    output1+=`<tr> <td>${num} </td> <td> * </td> <td> ${i} </td> <td> = </td>  <td> ${result} </td>`;
+                }
+                // document.write(output1);
+                document.getElementById("output").innerHTML=output1;
+                
+            }
+        </script>
+
+            <input type="number" id="num"><label for="num"> Enter Number</label>
+            <button type="button" onclick="printTable()">Generate Table</button>
+
+        <div id="output" ></div>
+    </body>
+</html>

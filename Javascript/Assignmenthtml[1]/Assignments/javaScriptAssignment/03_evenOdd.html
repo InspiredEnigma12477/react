@@ -1,0 +1,31 @@
+<!-- Write a function to list all even numbers less than or equal to the number n. Take the value of n as input
+from user. Use while loop -->
+
+<html>
+    <head>
+        <title>evenOdd</title>
+
+    </head>
+    <body>
+        <script>
+            
+            even=()=>{
+                var num = document.getElementById("num").value;
+                document.getElementById("div1").innerHTML+="All even numbers : "
+                for(var i=0;i<=num;i++){
+                        if(i%2==0){
+                            document.getElementById("div1").innerHTML+=i+" "
+                        }
+                    }
+            }
+        </script>
+        <fieldset id="idnewF"><h1>Numbers Numbers</h1></fieldset>
+        <h1>Enter Number </h1>
+        <input type="number" id="num" >
+
+        <button type="button" onclick="even()">Find all Even</button>
+
+        <div id="div1"></div>
+
+    </body>
+</html>

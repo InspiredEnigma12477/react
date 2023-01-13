@@ -1,0 +1,36 @@
+body{
+    background-color: dimgray;
+    color: floralwhite;
+}
+img{
+    margin: 20px;
+    border-color: black 10px;
+    border-radius: 10%;
+}
+#image{
+    
+    float: left;
+    width: 25%;
+    
+}
+#p1{
+    font-weight: 100;
+    font-size: 135%;
+}
+#image2{
+   
+    float: right;
+    width: 30%;
+    
+}
+.zoom{
+    padding: 30px;
+ 
+    transition: transform .2s;
+    /* width: 200px;
+    height: 200px; */
+    margin: auto;
+}
+.zoom:hover{
+    transform: scale(1.5);
+}

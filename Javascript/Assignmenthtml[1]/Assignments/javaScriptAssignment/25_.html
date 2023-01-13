@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .date {
+        width: 48px;
+      }
+    </style>
+    <script>
+        
+        display=()=>{
+            let str = `Order id : ${id} <br>
+                        Cust name : ${Cname}<br>
+                        Billing date : ${bdate}<br>
+                        Shipping date : ${sdate}<br>
+                       Order total : ${order}<br>
+                        `;        
+        document.getElementById("output").innerHTML=str;
+        }
+</script>
+  </head>
+  <body>
+    <form action="">
+      <table style="text-align: left">
+        <tr>
+          <th>Order ID:</th>
+          <th>
+            <input type="text" name="" id="id"  />
+            <br />
+          </th>
+          <th id="cName"></th>
+        </tr>
+        <tr>
+          <th>Cust name :</th>
+          <th><input type="text" name="" id="Cname"  pattern="(?=.*[a-zA-Z]).{6,}"/> <br /></th>
+        </tr>
+        <tr>
+          <th>Enter Billing date :</th>
+          <th>
+            <input
+              type="number"
+              name=""
+              id="bdate"
+              class="date"
+              class="date"
+              placeholder="year"
+            />
+            <input
+              type="number"
+              name=""
+              id=""
+              class="date"
+              placeholder="month"
+            />
+            <input type="number" name="" id="" class="date" placeholder="day" />
+          </th>
+        </tr>
+
+        <tr>
+          <th>Enter Shipping date :</th>
+          <th>
+            <input
+              type="number"
+              name=""
+              id=""
+              class="date"
+              class="date"
+              placeholder="year"
+            />
+            <input
+              type="number"
+              name=""
+              id=""
+              class="date"
+              placeholder="month"
+            /><input
+              type="number"
+              name=""
+              id=""
+              class="date"
+              placeholder="day"
+            /><br />
+          </th>
+        </tr>
+
+        <tr>
+          <th>Order total:</th>
+          <th><input type="text" name="" id="order" /> <br /></th>
+        </tr>
+
+        <tr>
+          <th><button>display</button></th>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

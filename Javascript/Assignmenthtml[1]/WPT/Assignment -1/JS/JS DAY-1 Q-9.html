@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <hr style="border-style: dashed;">
+     <h1 style="text-align: center;">*********Calculate Compound Interest*********</h1>
+  <hr style="border-style: dashed;">
+    <label>Enter principal: </label>
+    <input type="number" id="a"><br>
+    <label>Enter Rate of interest: </label>
+    <input type="number" id="b"><br>
+    <label>Enter No. of years: </label>
+    <input type="number" id="c"><br>
+    <button type="button" id="z" style="background-color: blue; color:white" onclick="CompoundI()">Calculate Interest</button><br><br>
+      <script>
+            function CompoundI(){
+              var p=parseInt(document.getElementById("a").value)
+              var r=parseInt(document.getElementById("b").value)
+              var n=parseInt(document.getElementById("c").value)
+              // var ft=r/100
+              var ci=p*Math.pow((1+r/100),n)-p
+              // document.write("Compound_Interest: "+Math.round(ci).toFixed(2))
+              document.getElementById("i").innerHTML="Compound Interest: "+Math.round(ci).toFixed(2);
+            }
+      </script>
+
+    <div id="i">
+         
+    </div>
+</body>
+</html>

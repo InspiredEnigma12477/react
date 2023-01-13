@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Question 1</title>
+
+    <script>
+        function max() {
+
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var num3 = document.getElementById("num3").value;
+            console.log(num1, num2, num3);
+            
+            if (num1 > num2 && num1 > num3) {
+                document.getElementById("result").innerHTML = "Greatest number = " + num1;
+            }
+            else if (num2 > num1 && num2 > num3) {
+                document.getElementById("result").innerHTML = "Greatest number = " + num2;
+            }
+            else {
+                document.getElementById("result").innerHTML = "Greatest number = " + num3;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Find the greatest number</h1>
+
+    <form action="" class="inputs">
+        <label for="num1">Num1</label>
+        <input type="number" id="num1" name="num1">
+        <br>
+        <label for="num2">Num2</label>
+        <input type="number" id="num2" name="num2">
+        <br>
+        <label for="num3">Num3</label>
+        <input type="number" id="num3" name="num3">
+        <br>
+        <button type="button" value="Submit" onclick="max()">
+            Submit
+        </button>
+        <br>
+        <div id="result"></div>
+    </form>
+</body>
+
+</html>

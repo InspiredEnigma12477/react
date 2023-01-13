@@ -1,0 +1,70 @@
+<!-- 4. Write a function that accepts two numbers and a operator like (+,-,*, /) from user and performs the
+appropriate operation indicated by the operator. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <script>
+        calculator = () => {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var operator = document.getElementById("operator").value;
+            var result;
+
+            switch (operator) {
+                case "+":
+                    result = num1 + num2;
+
+                    break;
+
+                case "-":
+                    result = num1 - num2;
+
+
+                    break;
+
+                case "/":
+                    result = num1 / num2;
+
+                    break;
+
+                case "*":
+                    result = num1 * num2;
+
+                    break;
+
+                default:
+                    document.getElementById("output").innerHTML+= "Enter write operator"
+                    break;
+            }
+
+            document.getElementById("output").innerHTML+=result;
+
+        }
+    </script>
+
+    <input type="number" id="num1"><label for="num1">First number</label>
+    <input type="number" name="" id="num2"><label for="num2">Second number</label>
+    <input type="text" name="" id="operator"><label for="operator">Enter operator (+,-,/,*)</label>
+    <button type="button" onclick="calculator()">calculate</button>
+    <div>
+        output:
+    </div>
+
+
+    <div id="output">
+      
+
+    </div>
+</body>
+
+</html>

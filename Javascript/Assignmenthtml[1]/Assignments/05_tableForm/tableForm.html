@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table,tr,td{
+   background-color: pink;
+    border-collapse: collapse;
+    border-color: black;
+    border: 1px;
+    border: solid;
+    width: 10cm;
+    height: 1cm;
+    width: 40%;
+    padding: 0.5%;
+}
+    </style>
+</head>
+<body>
+    <table >
+        <tr>
+            <td>Name</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Employee Code</td>
+            <td><input type="number" style="width: 10mm;" ></td>
+        </tr>
+        
+        <tr>
+            <td >Department</td>
+            <td><input type="radio" name="dep" >ADMIN <br>
+                <input type="radio" name="dep">HR <br>
+                <input type="radio" name="dep">TECHNICAL <br>
+                <input type="radio" name="dep">ACCOUNTS <br>
+            </td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><textarea name="address" id="a1" cols="40" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td>Date Of Joining</td>
+            <td><input type="date" name="" id=""></td>
+        </tr>
+        <tr>
+            <td rowspan="4">Training program Attended </td>
+            <td><input type="checkbox" name="" id=""> HTML/DHTML</td>
+        </tr>
+        <TR>
+            
+            <td> <input type="checkbox" name="" id=""> JAVA</td>
+        </TR>
+        <TR>
+            
+            <td> <input type="checkbox" name="" id=""> CLIENT/SERVER</td>
+        </TR>
+        <TR>
+            
+            <td> <input type="checkbox" name="" id=""> .NET</td>
+        </TR>
+
+        <TR>
+            <TD>Training Programmes need to attend</TD>
+            <td><select name="training" id="t11" size="2">
+                <option value="JavaScript">JavaScript</option>
+                <option value="JstRuts">JstRuts</option>
+            </select></td>
+        </TR>
+        <tr>
+            <td>send the information at</td>
+            <td><a href="mailto:emoinfo@patni.com">emoinfo@patni.com</a></td>
+        </tr>
+        
+    </table>
+</body>
+</html>

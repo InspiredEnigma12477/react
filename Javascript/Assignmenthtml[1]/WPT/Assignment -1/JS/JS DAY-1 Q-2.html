@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function user(){
+            var msg=document.getElementById("a").value;
+            var num=parseInt(document.getElementById("b").value);
+            for(i=0;i<num;i++){
+                document.getElementById('p').innerHTML=(msg+"<br>");
+            }
+        }
+    </script>
+    <label>Enter a message: </label>
+    <input type="text" id="a"><br>
+    <label>Enter a number: </label>
+    <input type="number" id="b"><br>
+    <button type="button" id="click" onclick="user()">Run</button>
+    <div id="p" style="height:100%;width:100%"></div>   
+</body>
+</html>

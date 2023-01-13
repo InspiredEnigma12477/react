@@ -1,0 +1,146 @@
+// @use "../scss/ultimate.scss" as *;
+$primary-color: #10a19d;
+$secondary-color: #ffa62b;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+}
+body {
+    width: 100%;
+}
+
+.head {
+    // display: flex;
+    img {
+        float: left;
+        margin: 10px;
+        padding: 13px 5px 0px 5px;
+        width: 5%;
+        height: 5%;
+    }
+    h1 {
+        padding: 0px 0px 0px 15px;
+        font-size: 4rem;
+        color: $primary-color;
+        font-weight: 700;
+    }
+}
+
+.nav {
+    margin: 0;
+    padding: 5px 15px;
+
+    width: 100%;
+    background-color: $primary-color;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        padding: 0px 40px 0px 5px;
+    }
+}
+
+.mid{
+    p{
+        padding: 0 10px;
+        text-align: right;
+    }
+
+}
+
+.table {
+    margin: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 97vw;
+    border-collapse: collapse;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        td:nth-child(1) {
+            background-color: #fffff1;
+        }
+        .row1,
+        .row2 {
+            background-color: $primary-color;
+            color: #fff;
+        }
+
+        th{
+            background-color: $primary-color;
+        }
+
+
+      
+
+        th,
+        tr,
+        td {
+            width: 100px;
+            border: 1px solid #000;
+            padding: 1px;
+
+            text-align: center;
+        }
+
+
+    }
+}
+
+.bottom {
+    display: flex;
+  
+    .left-div {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px;
+        text-align: left;
+        font-size: 1.5rem;
+
+        p {
+            padding: 20px;
+            font-weight: 500;
+        }
+    }
+    .right-div {
+        width: 30%;
+        padding: 20px;
+        text-align: center;
+
+        border: rgb(255, 61, 203) 2px solid;
+        border-radius: 35px;
+        margin: 40px;
+        box-shadow: 10px 10px 10px 0 rgb(127, 76, 114);
+        table{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+
+            td{
+                padding: 0 10px;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $primary-color;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    li{
+        padding: 0px 20px;
+    }
+}

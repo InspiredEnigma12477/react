@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: 'Roboto';
+        }
+    </style>
+</head>
+<body>
+    <div id="arr">
+
+    </div>
+    <br>
+    <div id="count">
+
+    </div>
+    <script type="text/javascript">
+        
+        var arr = ["www.google.com"," artstation.com ","firewatch.com", "www.msn.com", "www.amazon.co.in", "in.answers.yahoo.com", "en.m.wikipedia.com", "codehs.gitbooks.io", "www.coderanch.com"];
+        var count = 0;
+        var pattern = new RegExp("www", "i");
+        for(i=0;i<arr.length;i++){
+            var result = pattern.test(arr[i]);
+            if(result){
+            count ++;
+            }
+        }
+        document.getElementById("arr").innerHTML = "The array of websites is: ["+arr+ "]"
+        document.getElementById("count").innerHTML = "Total number of www sites: "+ count    
+        
+    </script>
+</body>
+</html>

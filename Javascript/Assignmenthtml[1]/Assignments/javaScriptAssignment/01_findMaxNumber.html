@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            background-color: aliceblue;
+            margin: auto;
+            width: 500px;
+           
+            line-height-step: 10px;
+            border: 5px black solid;
+            border-radius: 10px;
+            text-align: center;
+            padding: 5px;
+
+        }
+        .hide{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+        #bt{
+            background-color: greenyellow;
+            border-radius: 10px;
+            border: 1px solid black;
+            width: 200px;
+            height: 70px;
+        }
+        .box{
+            height: 20px;
+            width: 100px;
+        }
+        #firstDiv{
+            position: absolute;
+            top :190px;
+            left: 500px;
+        }
+        #b{
+            padding: 20px;
+            text-align: center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- write a program accept three positive numbers and output largest of them!--> 
+    <script>
+        hideDisplay=()=>{
+
+            document.getElementById("b").classList.remove("show");
+            document.getElementById("b").classList.add("hide");
+
+        }
+      findMax=()=>{
+        
+        var num1=document.getElementById("n1").value;
+        var num2=document.getElementById("n2").value;
+        var num3=document.getElementById("n3").value; 
+        var largest 
+        if(num1>=num2 && num1>=num3)
+            {
+                largest=num1;
+            }
+        else if(num2>=num3 && num2 >=num1){
+            largest=num2;
+        }
+        else{
+            largest=num3;
+        }
+        document.getElementById("b").classList.remove("hide");
+        document.getElementById("b").classList.add("show");
+
+        document.getElementById("b").innerHTML=("<h2>Largest Number is "+largest+"<\h2>");
+        document.getElementById("n1").value="";
+        document.getElementById("n2").value="";
+        document.getElementById("n3").value=''; 
+      }  
+    </script>
+    <div id="firstDiv" >
+        <h1>Find max number out of three!</h1>
+
+            <input type="number" id="n1" class="box" onfocus="hideDisplay()"> <label for="n1"> <h3>First number</h2> </label> <br>
+            <br>
+            <input type="number" id="n2" class="box"><label for="n1"><h3>Second number</h2> </label><br>
+            <br>
+            <input type="number" id="n3" class="box"><label for="n1"><h3>Third number</h2>  </label> <br>
+            <br> 
+            <button id="bt" type="button" onclick="findMax()"><label for="bt"><h2>Find</h2></label></button>
+
+    </div>
+    <div id="b" class="hide">
+
+    </div>
+</body>
+</html>

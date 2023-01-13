@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function max() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var num3 = document.getElementById("num3").value;
+
+            console.log(num2);
+            console.log(num3);
+
+            if (num1 > num2 && num1 > num3) {
+                document.getElementById("maxnum").innerHTML = "Num 1 is greatest number"
+            }
+            else if (num2 > num1 && num2 > num3) {
+                document.getElementById("maxnum").innerHTML = "Num 2 is greatest number"
+            }
+            else {
+                document.getElementById("maxnum").innerHTML = "Num 3 is greatest number"
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>Num 1</td>
+                <td><input type="number" name="num1" id="num1"></td>
+            </tr>
+            <tr>
+                <td>Num 2</td>
+                <td><input type="number" name="num2" id="num2"></td>
+            </tr>
+            <tr>
+                <td>Num 3</td>
+                <td><input type="number" name="num3" id="num3"></td>
+            </tr>
+        </table>
+        <button type="button" onclick="max()">find max</button><br>
+        <div id="maxnum"></div>
+    </form>
+</body>
+
+</html>

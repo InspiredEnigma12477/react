@@ -1,0 +1,36 @@
+table,td,tr{
+    column-width: 12.5cm ;
+    padding: 1mm;
+}
+#p1{
+    border: 1px black solid;
+    padding: 2%;
+    z-index: -20;
+    width: 25%;
+}
+#p2{
+    z-index: 20;
+    position:absolute;
+    margin-top: 0.5%;
+    margin-left: 3%;
+    background-color: white;
+}
+#p3{
+    z-index: 20; 
+    top : 44.4%;
+    left : 31%;
+    position:absolute;
+     margin-top: 1%;
+      margin-left: 3%;
+       background-color: white;
+}
+#p4{
+    border: 1px black solid;
+    padding: 2%;
+    z-index: -20;
+    width: 25%;
+    position : absolute;
+    right: 0;
+    top:45.5%;
+    left:31%
+}

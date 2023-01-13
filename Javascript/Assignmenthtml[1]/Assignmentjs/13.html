@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous">
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <table class="table">
+        <tr class="row">
+            <th>EmpID</th>
+            <th>EmpName</th>
+            <th>Salary</th>
+        </tr>
+        <tbody id="Table">
+
+        </tbody>
+
+    </table>
+    <script type="text/javascript">
+        var data = [
+            {empId:1,empName:'Kratos',salary:20000},
+            {empId:2,empName:'Dante',salary:60000},
+            {empId:3,empName:'Tarnished',salary:40000},
+            {empId:4,empName:'Geralt',salary:10000},
+        ]
+        console.log(data);
+        for(var a=0;a<data.length;a++){
+            console.log(data[a].empId+" "+data[a].empName+" "+data[a].salary);
+        }
+        
+        function buildTable(data){
+            var table = document.getElementById("Table");
+            for(var i =0; i < data.length; i++){
+                var row =   `<tr>
+                                <td>${data[i].EmpId}</td>
+                                <td>${data[i].empName}</td>
+                                <td>${data[i].salary}</td>
+                            </tr>`
+
+                table.innerHTML = row;
+            }
+        }
+
+    </script>
+</body>
+</html>

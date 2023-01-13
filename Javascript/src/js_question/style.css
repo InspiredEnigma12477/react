@@ -1,0 +1,46 @@
+body{
+    /* Center the body element */
+    margin: 80px 80px;
+    /* Set the width of the body element */
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    
+    padding: 0;
+}
+
+input{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px;
+}
+
+label{
+    display: block;
+    margin: 5px;
+}
+
+button{
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+div{
+    margin: 5px;
+
+}
+
+.newbg{
+    background-color:#81ecec;
+}
+
+.newbg2{
+    background-color: #fff;
+}

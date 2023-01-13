@@ -1,0 +1,42 @@
+// @use "./ultimate.scss" as *;
+$bg-color: #ffffff;
+$text-color: #000;
+
+body {
+    background-color: $bg-color;
+    color: $text-color;
+
+    .personal-details{
+        ul{
+            list-style-type: none;
+            padding-left: 20px;
+            
+        }
+    }
+    .EduTable {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+
+        table {
+            tr{
+                flex: 1;
+            }
+            th {
+                font-style: italic;
+            }
+            td {
+                text-align: center;
+            }
+            flex: 1;
+            // flex-wrap: wrap;
+        }
+    }
+    .skills {
+        strong {
+            font-style: italic;
+            padding-right: 15px;
+        }
+    }
+}

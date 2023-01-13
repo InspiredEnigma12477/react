@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JQ/jquery.js"></script>
+    <style>
+        #mydiv{
+            background-color: gold;
+            width: 250px;
+            height:250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv">
+        <img src="tree.jpg" width="210px" height="210px" style="margin: 20px;">
+    </div>
+    
+    <input type="radio" name="btn1" id="btn1">Show 
+    <input type="radio" name="btn1" id="btn2">Hide 
+    <input type="radio" name="btn1" id="btn3">tog
+    <p></p>
+</body>
+<script>
+    $(document).ready(function(){
+        $('#btn1').change(function(){
+            if($('#btn1').is(':checked'))
+            {
+                $('#mydiv').show(1500,function(){
+                    $('p').html('Showing tree')
+                })
+            }
+        })
+        $('#btn2').change(function(){
+            if($('#btn2').is(':checked'))
+            {
+                $('#mydiv').hide(1500,function(){
+                    $('p').html('Hiding tree')
+                })
+            }
+        })
+        $('#btn3').change(function(){
+            if($('#btn3').is(':checked'))
+            {
+                $('#mydiv').toggle(2000,function(){
+                    $('p').html(' this is called toggling')
+                })
+            }
+        })
+    })
+</script>
+</html>

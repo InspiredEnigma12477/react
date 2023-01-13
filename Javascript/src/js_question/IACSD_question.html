@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>IACSD_Question2</title>
+</head> 
+<body>
+    <section>
+
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <br>
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address">
+            <br>
+            <label for="Hobbies">Hobbies</label>
+            <input type="text" name="Hobbies" id="Hobbies">
+            <br>
+
+            <button type="button" value="Add Object" onclick="addobj()">
+                Add Object
+            </button>
+
+            <button type="button" value="Display Object" onclick="disobj()">
+                Display Object
+            </button>
+
+            <div class="result" id="result"></div>
+
+    </section>
+
+    <script>
+
+        var name = document.getElementById("name").value;
+        var address = document.getElementById("address").value;
+        var Hobbies = document.getElementById("Hobbies").value;
+
+        var obj = {
+            name: name,
+            address: address,
+            Hobbies: Hobbies
+        }
+
+        function addobj(){
+
+            document.getElementById("result").innerHTML += obj.value
+        }
+    </script>
+</body>
+</html>

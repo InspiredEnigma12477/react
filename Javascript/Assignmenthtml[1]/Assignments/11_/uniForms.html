@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(25, 102, 138) ;
+            color: white;
+            
+        }
+        fieldset{
+            align-items: center;
+            align-self: center;
+            align-content: center;
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            margin: auto;
+            align-items: center;
+            
+        }
+        table{
+            border-spacing: 30px;
+            padding: 0%;
+        }
+        .image{
+            width: 30px;
+            height: 30px;
+            background-color: rgb(25, 102, 138);
+        }
+        #f2{
+           
+            align-items: center;
+            align-self: center;
+            align-content: center;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+       <legend style="font-size: x-large;">Registration Details</legend>
+       <table>
+        <tr>
+            <th>
+                University :
+            </th>
+            <td>
+                <input type="text" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Institute :
+            </th>
+            <td>
+                <input type="text" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Branch :
+            </th>
+            <td>
+                <select name="" id="" >
+                    <option value="" disabled selected>--Select---</option>
+                    <option value="Mechanical" >Mechanical</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Civil">Civil</option>
+                    <option value="Electronics">Electronics</option>
+
+                  
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Degree:</th>
+            <td>
+                <select name="" id="" >
+                    <option value="" disabled selected>--Select---</option>
+                    <option value="BE" >BE</option>
+                    <option value="ME">ME</option>
+                    <option value="PHD">PHD</option>
+                </select>
+                <input type="radio" name="deg"> 
+                <label for="deg">Pursuing</label>
+                
+                <input type="radio" name="deg"> 
+                <label for="deg">Compeleted</label>
+            </td>
+        </tr>
+        <tr>
+            <th>Averge CPI:</th>
+            <td><input type="number" name="cpi" max="10" min="0">Upto
+            <input type="number" name="cgp" max="10" min="0">
+            <label for="cgp">Th Semester</label>
+            </td>
+        </tr>
+        <tr>
+            <th>Experience</th>
+            <td><input type="number" max="30" min="0">Years</td>
+        </tr>
+        <tr>
+            <th>Your Website Or Blog:</th>
+            <td><input type="text" value="//http:"></td>
+        </tr>
+
+       </table>
+    </fieldset>
+    <fieldset id="f2">
+        <img src="invert.png" class="image" alt="">
+        Step 2
+        <img src="original.png"  class="image" alt="">
+        
+    </fieldset>
+</body>
+</html>

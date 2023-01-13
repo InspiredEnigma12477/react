@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Write a function pow(x,y) that calculates xy. Do not use the Math predefined object
+        power=()=>{
+            let number = document.getElementById("num").value;
+        let power = document.getElementById("pow").value;
+
+        let ans =1 ;
+        for(let i =0;i<power;i++){
+            ans=ans*number;
+        }
+        document.getElementById("output").innerHTML=` ${number} ^ ${power} = ${ans}`;
+
+        }
+        
+
+    </script>
+    <style>
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <input type="number" id="num" name="num" placeholder="base number">
+        <input type="number" id="pow" name="pow" placeholder="Power number">
+        <button type="button" onclick="power()">calculate</button>
+    </div>
+        <div id="output">
+
+        </div>
+</body>
+</html>

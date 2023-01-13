@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            text-align: center;
+            color: aliceblue;
+            
+        }
+    </style>
+   
+  </head>
+  <body>
+    
+
+    <div id="myDiv"></div>
+    <div id="this">Time until next year:</div>
+    <div id="countdown"></div>
+    <script>
+        date1 = new Date();
+        let day1;
+        let month;
+        let hr;
+        hr = date1.getHours();
+        dayName = date1.getDay();
+        dayMonth = date1.getMonth() + 1;
+  
+        //greetings
+        if (hr > 5 && hr <= 12) {
+          dayHour = "Good Morning";
+        } else if (hr >= 12 && hr <= 16) {
+          dayHour = "Good Afternoon";
+        } else if (hr >= 17 && hr <= 20) {
+          dayHour = "Good Evening";
+        } else {
+          dayHour = "Good Night";
+        }
+  
+        //day
+        if (dayName == 1) {
+          day1 = "Monday";
+        } else if (dayName == 2) {
+          day1 = "Tuesday";
+        } else if (dayName == 3) {
+          day1 = "Wednesday";
+        } else if (dayName == 4) {
+          day1 = "Thursday";
+        } else if (dayName == 5) {
+          day1 = "Friday";
+        } else if (dayName == 6) {
+          day1 = "Saturday";
+        } else if (dayName == 0) {
+          day1 = "Sunday";
+        }
+          //Month
+        if (dayMonth == 1) {
+          month = "January";
+        } else if (dayMonth == 2) {
+          month = "Februray";
+        } else if (dayMonth == 3) {
+          month = "March";
+        } else if (dayMonth == 4) {
+          month = "April";
+        } else if (dayMonth == 5) {
+          month = "May";
+        } else if (dayMonth == 6) {
+          month = "June";
+        } else if (dayMonth == 7) {
+          month = "July";
+        } else if (dayMonth == 8) {
+          month = "August";
+        } else if (dayMonth == 9) {
+          month = "September";
+        } else if (dayMonth == 10) {
+          month = "October";
+        } else if (dayMonth == 11) {
+          month = "November";
+        } else if (dayMonth == 12) {
+          month = "December";
+        }
+        dayMonth = date1.getMonth();
+        var display = `<div style="text-align:center"><h2>Today is ${day1} , ${date1.getDay()} ${month} ${date1.getFullYear()},Welcome, and ${dayHour} to You </h2></div>`
+        document.getElementById("myDiv").innerHTML+=display ;
+         
+        //countdown section
+
+        var countDownDate = new Date("Jan 1, 2023 00:00:01").getTime();
+
+        var x = setInterval(function(){
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance/(1000*60*60*24));
+
+            var hours = Math.floor(distance%(1000*60*60*24)/(1000*60*60));
+
+            var minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+
+            var seconds = Math.floor((distance %(1000*60))/1000);
+
+            document.getElementById("countdown").innerHTML =`<h1>${days}  d  ${hours} h ${minutes} m ${seconds} s`;
+
+            if(distance < 0){
+                clearInterval (x);
+                doucument.getElementById("countdown").innerHTML="Expired";
+            }
+        },1000)
+      </script>
+  </body>
+</html>

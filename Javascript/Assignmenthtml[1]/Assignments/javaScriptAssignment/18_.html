@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 900px;
+        padding: 5px;
+      }
+      #output {
+        text-align: center;
+        height: 50px;
+      }
+      .hide {
+        display: none;
+      }
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <table>
+        <tr>
+          <th>Enter String :</th>
+          <th><input type="text" name="" id="string" onfocus="hide()" " /></th>
+        </tr>
+        <tr>
+          <th>Enter Sub String :</th>
+          <th><input type="text" name="" id="subString" /></th>
+        </tr>
+        <tr>
+          <th>Replace with String :</th>
+          <th><input type="text" name="" id="replace" /></th>
+        </tr>
+        <tr>
+          <th>
+            <input type="radio" name="choice" id="" value="search" />Search
+            substring in main string
+          </th>
+          <th>
+            <input type="radio" name="choice" id="" value="upper" />To Upper
+            Case
+          </th>
+          <th>
+            <input type="radio" name="choice" id="" value="lower" />To Lower
+            Case
+          </th>
+          <th>
+            <input type="radio" name="choice" id="" value="trim" />Trim spaces
+          </th>
+          <th>
+            <input
+              type="radio"
+              name="choice"
+              id=""
+              value="concatenate"
+            />Concatenate
+          </th>
+          <th>
+            <input type="radio" name="choice" id="" value="replace" />replace
+          </th>
+        </tr>
+        <tr>
+          <th></th>
+        </tr>
+        <tr>
+          <th><button type="button" onclick="query()">Submit Query</button></th>
+        </tr>
+      </table>
+    </div>
+    <div id="output" class="hide"></div>
+
+    <script>
+      hide=()=>{
+          document.getElementById("output").classList.remove("show");
+          document.getElementById("output").classList.add("hide");
+      }
+      show=()=>{
+          document.getElementById("output").classList.remove("hide");
+          document.getElementById("output").classList.add("show");
+      }
+      query = () => {
+        show();
+        // document.getElementById("output").classList.remove("hide");
+        // document.getElementById("output").classList.add("show");
+        let replace = document.getElementById("replace").value;
+        let string = document.getElementById("string").value;
+        let subString = document.getElementById("subString").value;
+
+        var newSarray = string.split(" ");
+        //clear input
+        clear = () => {
+          document.getElementById("replace").value = "";
+          document.getElementById("string").value = "";
+          document.getElementById("subString").value = "";
+        };
+        //display array
+        display = (arr) => {
+          let str = "";
+          for (ob of arr) {
+            str += ob + " ";
+          }
+          document.getElementById("output").innerHTML = str;
+        };
+
+        //search string
+        search = () => {
+          for (ob of newSarray) {
+            if (ob === subString) {
+              return ob;
+            }
+          }
+          return "String not found!";
+        };
+        //upper case any in between string
+        upper = () => {
+          for (let i = 0; i < newSarray.length; i++) {
+            if (newSarray[i] === subString) {
+              newSarray[i] = newSarray[i].toUpperCase();
+            }
+          }
+          return newSarray;
+        };
+        //lower case
+        lower = () => {
+          for (let i = 0; i < newSarray.length; i++) {
+            if (newSarray[i] === subString) {
+              newSarray[i] = newSarray[i].toLowerCase();
+            }
+          }
+          return newSarray;
+        };
+        //trim spaces in string
+        trim = () => {
+          newSarray = string.split(" ").join("");
+          return newSarray;
+        };
+        //replace given string with another string
+        replaceS = () => {
+          for (let i = 0; i < newSarray.length; i++) {
+            if (newSarray[i] === subString) {
+              newSarray[i] = replace;
+            }
+          }
+          return newSarray;
+        };
+        //find which radio button is checked
+        let arr = document.getElementsByName("choice");
+        for (ob of arr) {
+          if (ob.checked) {
+            if (ob.value == "search") {
+              clear();
+              //calling search
+              var val = search();
+              if (val == "String not found!") {
+                document.getElementById("output").innerHTML = val;
+              } else {
+                document.getElementById("output").innerHTML =
+                  "String found : " + val;
+              }
+            } else if (ob.value == "upper") {
+              clear();
+              //calling upper
+              let val = upper();
+              alert(val);
+              display(val);
+              //document.getElementById("output").innerHTML = val;
+            } else if (ob.value == "lower") {
+              clear();
+              //calling lower
+              var val = lower();
+              alert(val);
+              display(val);
+              // document.getElementById("output").innerHTML = val;
+            } else if (ob.value == "trim") {
+              clear();
+              //trim string calling
+              var val = trim();
+              document.getElementById("output").innerHTML = val;
+            } else if (ob.value == "concatenate") {
+              clear();
+              //joining string
+              var val = string + subString;
+              document.getElementById("output").innerHTML = val;
+            } else if (ob.value == "replace") {
+              clear();
+              //replacing strings
+              var val = replaceS();
+              display(val);
+              // document.getElementById("output").innerHTML = val;
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

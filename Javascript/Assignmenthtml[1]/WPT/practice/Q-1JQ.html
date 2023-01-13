@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JQ/jquery.js"></script>
+</head>
+<body>
+    <input type="number" name="nm" id="nm"><br>
+    <button type="button" id="btn">Generate table</button><br>
+    <p></p>
+</body>
+<script>
+    $(document).ready(function(){
+        var num=parseInt($('nm').val());
+        $('btn').click(function(){
+            for(let i=1;i<=10;i++){
+            $('p').html(num+'x'+i+'='+(num*i)+'<br>')
+        }
+        })
+    })
+</script>
+</html>

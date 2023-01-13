@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="array"></div>
+    <div id="reversed"></div>
+    <div id="sorted"></div>
+    <script type="text/javascript">
+        var Anime = ["Naruto", "Goku", "Luffy", "Ichigo","Spike"];
+        var reversed = Anime.slice();
+        reversed.reverse();
+
+        var sorted = reversed.slice();
+        sorted.sort();
+        
+        document.getElementById("array").innerHTML="The array is ["+Anime+"]"
+        document.getElementById("reversed").innerHTML="The reversed array is ["+reversed+"]"
+        document.getElementById("sorted").innerHTML="The sorted array is ["+sorted+"]"
+    </script>
+</body>
+</html>

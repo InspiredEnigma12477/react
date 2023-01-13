@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <style>
+        body {
+
+            background-color: yellowgreen;
+        }
+
+        fieldset {
+            border: 2px black solid;
+            border-collapse: collapse;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        #f {
+            background-color: skyblue;
+            margin: auto;
+            width: 50%;
+
+        }
+
+        #f1 {
+            background-color: red;
+
+        }
+
+        #f2 {
+            height: 256px;
+            flex-direction: column;
+            float: left;
+
+        }
+
+        #f4 {
+            width: 720px;
+            text-align: center;
+        }
+
+        #n1 {
+            align-items: center;
+            align-content: center;
+            align-self: center;
+        }
+        #output{
+            
+            float: left;
+            position: absolute;
+            right: 0;
+            height: auto;
+            width: 23%;
+            padding: 1%;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <fieldset id="f">
+        <div id="output" >
+            
+            
+        </div>
+        <fieldset id="f1">
+            <h1>ABC Enterprises</h1>
+        </fieldset>
+        <div>
+            <fieldset id="f2">
+                <h3>Welcome to Registration!</h3>
+            </fieldset>
+
+            <fieldset id="f3">
+                <table id="t1">
+                    <tr>
+                        <th>Name:</th>
+                        <td><input type="text" name="nm" id="nm1"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Maritial Status:</th>
+                        <td><input type="radio" name="r1" value="Yes">Yes <input type="radio" name="r1" id="ms"
+                                value="No">No</td>
+
+                    </tr>
+
+                    <tr>
+                        <th>Email:</th>
+                        <td><input type="email" name="" id="em"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Address:</th>
+                        <td><textarea name="add" id="ad" cols="30" rows="10"></textarea></td>
+                    </tr>
+
+                    <tr>
+                    <tr>
+                        <th>Choice:</th>
+                        <td><select name="choice" id="chh">
+                                <option value="">--select option--</option>
+                                <option value="news letter">news letter</option>
+                                <option value="magazine">magazine</option>
+                                <option value="blogs">blogs</option>
+                                <option value="paper">paper</option>
+                            </select></td>
+
+                    </tr>
+
+                    </tr>
+
+                </table>
+
+
+            </fieldset>
+            <div>
+                <fieldset id="f4">
+                    <input type="radio" name="window" id="n1" value="sameWindow">Display on same page
+                    <input type="radio" name="window" id="n2" value="newWindow"> display on new page <br> <br>
+                    <button type="button" id="n1" onclick="showData()">Submit</button>
+                    <button type="button" id="n1">Clear</button>
+
+                </fieldset>
+            </div>
+
+        </div>
+    </fieldset>
+
+</body>
+
+</html>

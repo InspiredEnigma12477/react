@@ -1,0 +1,21 @@
+body{
+
+}
+table,tr,td{
+   background-color: pink;
+    border-collapse: collapse;
+    border-color: black;
+    border: 1px;
+    border: solid;
+    width: 10cm;
+    height: 1cm;
+    width: 40%;
+    padding: 0.5%;
+}
+div{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+}

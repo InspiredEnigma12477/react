@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <button type="button" onclick="find()">Find</button>
+    <div id="output">
+            <div name="div" >
+                Eklavya
+            </div>
+            <div name="div">
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aliquam odit voluptatem nobis in autem Eklavya reiciendis ipsa ex voluptatum alias rerum animi omnis, eius fuga cupiditate iste temporibus libero et?
+                </span>
+            </div>
+            <div name="div">
+                training 
+            </div>
+            <div name="div" id="new">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aliquam odit voluptatem nobis in autem reiciendis ipsa ex Eklavya voluptatum alias rerum animi omnis, eius fuga cupiditate iste temporibus libero et?
+            </div>
+            <div name="div">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eveniet dicta aliquid doloribus. Ut assumenda consectetur atque quos. Praesentium rem, ea nihil accusamus quam possimus reiciendis ab cum. Hic, quia. 
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aliquam odit voluptatem nobis in autem reiciendis ipsa ex voluptatum alias rerum animi omnis, eius fuga cupiditate iste temporibus libero et?
+            </div>
+            <div name="div">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aliquam odit voluptatem nobis in autem reiciendis ipsa ex voluptatum alias rerum animi omnis, eius fuga cupiditate iste temporibus libero et?
+            </div>
+            <div name="div">
+                training 
+            </div>
+            <div name="div">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aliquam odit voluptatem nobis in autem reiciendis ipsa ex voluptatum alias rerum animi omnis, eius fuga cupiditate iste temporibus libero et? training
+            </div>
+            <div name="div">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aliquam odit voluptatem nobis in autem reiciendis ipsa ex voluptatum alias rerum animi omnis, eius fuga cupiditate iste temporibus libero et?
+            </div>
+            <div name="div">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aliquam odit voluptatem nobis in autem reiciendis ipsa ex voluptatum alias rerum animi omnis, eius fuga cupiditate iste temporibus libero et?
+            </div>
+</div>
+<script>
+    find=()=>{
+        var arr = document.getElementsByName("div");
+      
+        let text1 = document.getElementById("new").textContent;
+      
+        for(ob of arr){
+            let str = ob.textContent;
+            let content = str.split(" ");
+            for(one of content){
+                if(one==="Eklavya"){
+                    document.getElementById("output").innerHTML+=`<br> ${ob.textContent}`
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

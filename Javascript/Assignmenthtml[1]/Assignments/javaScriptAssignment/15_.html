@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            arr=["eklavya","akshay","nikhil","abhinav","aniket"];
+            let reverse=[];
+            for(ob of arr){
+                let newString ="";
+                for(let i=ob.length-1;i>=0;i--){
+                    newString+=ob[i];
+                }
+                reverse.push(newString);
+            } 
+            let sorted =reverse.sort();
+            document.write(sorted);       
+        </script>
+    </head>
+    <body>
+        
+
+    </body>
+</html>
