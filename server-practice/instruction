@@ -6,6 +6,23 @@ app.use json
 
 mongoose.connect 
 put mongosh
- mongodb: localhost/db_name
+mongodb: localhost/db_name
 
- app.listen 3000
+app.listen 3000
+
+
+
+
+
+
+
+ CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL
+);
+
+
+
+

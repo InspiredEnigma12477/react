@@ -1,36 +1,18 @@
-const mysql = require('mysql');
-const bodyParser = require('body-parser');
+const express = require('express')();
+const db = require('./config/db');
+const cors = require('cors');
+const e = require('express');
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'password',
-    database: 'test'
-});
+const app = express();
 
-connection.connect();
+const PORT = 6969;
 
-app.use(bodyParser.json());
-
-app.get('/users', (req, res) => {
-    connection.query('SELECT * FROM users', (err, rows) => {
-        if (err) {
-            res.status(500).send
-        } else {
-            res.send(rows);
-        }
-    });
-});
-
-app.post('/users', (req, res) => {
-    const user = req.body;
-    connection.query('INSERT INTO users SET ?', user, (err, result) => {
-        if (err) {
-            res.status(500).send
+app.get('/api/get', (req,res) => {
+    db.query('SELECT * FROM users', (err, result) => {
+        if(err) {
+            console.log(err);
         } else {
             res.send(result);
         }
-    });
-}
-
-module.exports = app;
+    })
+})

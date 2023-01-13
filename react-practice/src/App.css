@@ -1,0 +1,152 @@
+body{
+  background-color: #282c34;
+  color: azure;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.center{
+  justify-content: center;
+  align-items: center;
+}
+section{
+  height: 100%;
+  width: 70vw;
+  margin: auto;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+nav, ul{
+  margin: auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+nav, ul, li{
+  padding: 10px;
+  text-decoration: none;
+  list-style: none;
+
+}
+input{
+  width: 95%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: #282c34;
+  color: azure;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+button{
+  width: 20%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: #282c34;
+  color: azure;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin: 10px;
+}
+button:hover{
+  cursor: pointer;
+  background-color: #61dafb;
+  color: #282c34;
+}
+button:hover{
+  cursor: pointer;
+  background-color: #61dafb;
+  color: #282c34;
+}
+li:hover{
+  cursor: pointer;
+  background-color: #61dafb;
+  color: #282c34;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+p{
+  color: azure;
+  font-size: 26px;
+  font-weight: 600;
+}
+span{
+  color: #61dafb;
+  font-weight: 400;
+}
+
+a{
+  color: white;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #282c34;
+  color: azure;
+  font-size: 1.5rem;
+}
+thead{
+  background-color: #282c34;
+  color: red;
+}
+
+th, td{
+  border: 1px solid #282c34;
+  padding: 10px;
+  text-align: center;
+}
